@@ -1,3 +1,13 @@
+<?php
+session_start();
+include('../verificar_login.php');
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,13 +16,14 @@
     <meta name="description" content="Descrição do meu website">
     <meta name="keywords" content="palavra,chave,site">
     <link href="css/css.css" rel="stylesheet" />
-    
+
     <title>pinkuppers</title>
 </head>
 <body>
-    <!--<video autoplay muted loop id="myVideo">
-    <source src="back/bc.mp4" type="video/mp4">
-    </video>-->
+    <h3> Usuário: <?php echo $_SESSION['nome_usuario']; ?> </h3>
+    <h3> Cargo: <?php echo $_SESSION['nome_cargo']; ?> </h3>
+    <h3> E-mail: <?php echo $_SESSION['nome_email']; ?> </h3>
+    <a href="../logout.php">Sair</a>
     <nav>
         <div class="logo">Nome</div>
         <nav class="desktop">

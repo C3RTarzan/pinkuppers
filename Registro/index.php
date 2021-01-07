@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,18 +19,41 @@
     <!--<video autoplay muted loop id="myVideo">
         <source src="back/bc.mp4" type="video/mp4">
     </video>-->
-    <div class="container">
+    <div class="container2">
         <div >
-            <div class="aa">
+            <div class="aa2">
                 <h2>Registro</h2>
-                <form method="POST" action="../php/Register.php">
+                <form class="box2" method="POST" action="account.php">
                     <input type="use" name="nick"  placeholder=" Nick" require maxlength="15" /><br>
                     <input type="email" name="email"  placeholder=" email" require maxlength="40" /><br>
                     <input type="password" name="senha" placeholder=" Senha" require maxlength="15" /><br>
                     <input type="password" name="confsenha" placeholder=" Senha" require maxlength="15" /><br>
                     <input type="submit" name="register" value="Register" />
-                </form>
-                <a href="../Login/index.html">Já possui uma conta? <strong>Logar-se!</strong></a>
+                </form></br>
+                <a href="../Login/index.php">Já possui uma conta? <strong>Logar-se!</strong></a>
+                <?php
+                    if(isset($_SESSION['nao_autentificado'])): ?>
+                <p><small><small> Usuario/email já cadastrados. </small></small></p>   
+                <?php
+                    endif;
+                    unset($_SESSION['nao_autentificado']);
+                ?>
+
+                <?php
+                    if(isset($_SESSION['campos_branco'])): ?>
+                <p><small><small> Preencha todos os campos. </small></small></p>   
+                <?php
+                    endif;
+                    unset($_SESSION['campos_branco']);
+                ?>
+
+                <?php
+                    if(isset($_SESSION['senha_conc'])): ?>
+                <p><small><small> Senhas não coincidem. </small></small></p>   
+                <?php
+                    endif;
+                    unset($_SESSION['senha_conc']);
+                ?>
             </div>
            
         </div>
