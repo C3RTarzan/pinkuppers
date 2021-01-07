@@ -1,0 +1,69 @@
+*{
+   
+    font-family: 'Courier New', Courier, monospace;  
+}
+/*.bg{
+    position: fixed;
+    z-index: -1000;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url("bc.jpg");
+}*/
+
+
+body {
+
+    background-image: url("/bc.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 400px;
+    height: 300px;
+    background-color: cadetblue;
+    position: relative;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 50px;
+}
+
+
+.aa {
+    border-radius: 40px;
+    position: absolute;
+    width: 200px;
+    background-color: blueviolet;
+    margin: 22%;
+    margin-top: 15%;
+    text-align: center;
+}
+
+/*.obj input[type="use"], [type="password"]{
+    background-color: rgb(236, 236, 236);
+    border-style: none;
+    border: 0.7px solid #000000;
+}
+.obj input[type="use"]{
+    margin-bottom: 5% !important;
+}
+.obj input[type="password"]{
+    margin-bottom: 8% !important;
+}
+.obj h2{
+    position: relative;
+    left: 52px;
+    font-family: cursive;
+    color: rgb(0, 0, 0);
+    margin-bottom: 5% !important;
+}
+.obj input[name="register"], [name="login"]{
+    position: relative;
+    color:black;
+    left: 15px;
+}*/
+
+
