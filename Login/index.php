@@ -1,7 +1,8 @@
-<?php            
+<?php   
+	session_start();
+	session_destroy();
     session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,9 +22,9 @@
     <div class="aa">
         <h2>Login</h2>
         <form class="box" method="POST" action="account.php">
-            <input type="use" name="nick" placeholder=" Nick" require maxlength="15" /><br>
-            <input type="password" name="senha" placeholder=" Senha" require maxlength="15" /><br>
-            <input type="submit" name="login" value="Login" />
+            <input type="use" name="nick" placeholder=" Nick" require maxlength="15" autocomplete="off"/><br>
+            <input type="password" name="senha" placeholder=" Senha" require maxlength="15" autocomplete="off"/><br>
+            <input type="submit" name="login" value="Login" autocomplete="off"/>
         </form></br>
         <a href="../Registro/index.php">Ainda não é inscrito? <strong>Cadastre-se!</strong></a>
         <?php

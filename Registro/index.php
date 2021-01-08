@@ -1,5 +1,7 @@
 <?php 
 session_start();
+session_destroy();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +14,7 @@ session_start();
     <meta name="description" content="Descrição do meu website">
     <meta name="keywords" content="palavra,chave,site">
     <link href="../css/indexRL.css" rel="stylesheet" />
+    <script type="text/javascript" async="" src="check.js"></script>
     
     <title>Registro</title>
 </head>
@@ -23,22 +26,22 @@ session_start();
         <div >
             <div class="aa2">
                 <h2>Registro</h2>
-                <form class="box2" method="POST" action="account.php">
+                <form class="box2" method="POST" action="account.php" autocomplete="off">
                     <input type="use" name="nick"  placeholder=" Nick" require maxlength="15" /><br>
-                    <input type="email" name="email"  placeholder=" email" require maxlength="40" /><br>
-                    <input type="password" name="senha" placeholder=" Senha" require maxlength="15" /><br>
-                    <input type="password" name="confsenha" placeholder=" Senha" require maxlength="15" /><br>
+                    <input type="email" name="email" placeholder=" email" require maxlength="40" /><br>
+                    <input type="password" name="senha" id="pass1" placeholder=" Senha" require maxlength="15" /><br>
+                    <input type="password" name="confsenha" id="pass2" placeholder=" Confirmar Senha" require maxlength="15" /><br>
                     <input type="submit" name="register" value="Register" />
                 </form></br>
                 <a href="../Login/index.php">Já possui uma conta? <strong>Logar-se!</strong></a>
+                
                 <?php
                     if(isset($_SESSION['nao_autentificado'])): ?>
                 <p><small><small> Usuario/email já cadastrados. </small></small></p>   
                 <?php
                     endif;
                     unset($_SESSION['nao_autentificado']);
-                ?>
-
+                ?>      
                 <?php
                     if(isset($_SESSION['campos_branco'])): ?>
                 <p><small><small> Preencha todos os campos. </small></small></p>   

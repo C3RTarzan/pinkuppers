@@ -14,7 +14,7 @@ if(empty($_POST['nick']) || empty($_POST['senha'])){ //checar se tem campos em b
  }
  if($_POST['senha'] != $_POST['confsenha']){
     $_SESSION['senha_conc'] = true;
-    header('Location: index.php');
+    header('Location: index.php'); /// senhas são iguais
     exit();
  }
  if($_POST['senha'] == '' || $_POST['confsenha'] == '' ){
@@ -22,14 +22,15 @@ if(empty($_POST['nick']) || empty($_POST['senha'])){ //checar se tem campos em b
     header('Location: index.php');
     exit();
  }
+
  
  if(isset($_POST['register'])){
-    $usuario =  $_POST['nick'];  // criando variavel
-    $senha = $_POST['senha'];  // criando variavel
-    $email =  $_POST['email'];  // criando variavel
+    $usuario =  trim($_POST['nick']);  // criando variavel
+    $senha = trim($_POST['senha']);  // criando variavel
+    $email =  trim($_POST['email']);  // criando variavel
     $cargo = 'user';
     $senhaMD5=MD5($senha);
-
+    
     $query = "INSERT into usuarios (nick, senha, email, cargo) VALUES ('$usuario', '$senhaMD5', '$email', '$cargo');"; //consulta com bd
 
     

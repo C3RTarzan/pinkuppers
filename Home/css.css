@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+.menu{
+    background-color: thistle;
+    height: 50px;
+    font-size: 10px;
+}
+.menu ul input{
+    cursor: pointer;
+    width: 6%;
+    height: 50px;
+    border-style: none;
+    outline-style: none;
+    border-radius: 1px;
+    outline-color: olive;  
+    font-family: verdana;
+    background-color: rgba(255, 255, 255, 0.5);  
+}
+.menu ul input{ /*font*/
+    font-family: 'Bold 700' 'Noto Sans', sans-serif;
+}
+/*.menu ul input:focus {
+    background-color: rgba(34, 34, 34, 0.5);
+}*/
+.menu ul input:hover {
+    border-style: solid;
+    border-radius: 1px;
+}
+.inff{
+    background-color: lightcoral;
+    height: 80px;
+}
+.inff ul{
+    cursor: default;
+    background-color: blue;
+    float: right;
+}
+
+
+
+/*Options*/
+#options{
+    display: none;
+    font-size: 25px;
+    left: 100px;
+}
+#option:focus ~ #options {
+    display:block;
+    
+ }
+ .menu ul input:checked {
+    background-color: rgba(250, 0, 0, 0.5);
+}

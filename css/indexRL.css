@@ -69,14 +69,24 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     font-size: 20px;
 }
+
 .box input[type="password"]{
+    color: rgb(192, 192, 192);
     transition-duration: 0.4s;
     margin-top: 13px;
 }
 .box input[type="use"]{
+    color: rgb(192, 192, 192);
     transition-duration: 0.4s;
     margin-top: 15px;;
    
+}
+
+.box input[type="use"]:focus{
+    outline: 0;
+}
+.box input[type="password"]:focus{
+    outline: 0;
 }
 .box input[type="submit"]{
     transition-duration: 0.4s;
@@ -123,12 +133,24 @@ body {
 .box2 input[type="password"]{
     transition-duration: 0.4s;
     margin-top: 13px;
+    color: rgb(192, 192, 192);
 }
 .box2 input[type="use"]{
     transition-duration: 0.4s;
     margin-bottom: 15px;
-   
+    color: rgb(192, 192, 192);  
 }
+.box2 input[type="password"]:focus{
+    outline: 0;
+
+}
+.box2 input[type="use"]:focus{
+    outline: 0;
+}
+.box2 input[type="email"]:focus{
+    outline: 0;
+}
+
 .box2 input[type="submit"]{
     transition-duration: 0.4s;
     margin-top: 30px;
