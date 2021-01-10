@@ -1,7 +1,6 @@
 <?php 
-session_start();
-session_destroy();
-session_start();
+    session_start();
+    session_unset();
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +12,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descrição do meu website">
     <meta name="keywords" content="palavra,chave,site">
-    <link href="../css/indexRL.css" rel="stylesheet" />
+    <link href="../indexRL.css" rel="stylesheet" />
     <script type="text/javascript" async="" src="check.js"></script>
     
     <title>Registro</title>

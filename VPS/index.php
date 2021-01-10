@@ -1,10 +1,7 @@
 <?php
 session_start();
 include('../verificar_login.php');
-if($_SESSION['nome_cargo'] != 'user'){
-    header('Location: ../Home/index.php');
-    exit();
-}
+
 ?>
 
 
@@ -29,7 +26,7 @@ if($_SESSION['nome_cargo'] != 'user'){
     <!--<h3> Usuário: <?php// echo $_SESSION['nome_usuario']; ?> </h3>
     <h3> Cargo: <?php// echo $_SESSION['nome_cargo']; ?> </h3>
     <h3> E-mail: <?php// echo $_SESSION['nome_email']; ?> </h3>
-    -->
+    <a href="../logout.php">Sair</a>-->
     
     <header>
             <div class="menu">
@@ -47,9 +44,8 @@ if($_SESSION['nome_cargo'] != 'user'){
                     <input type="Button" name="dark" value="DARK" onclick="redireDark()"/>
                     <input type="Button" name="option" value=":" for="options" id="option"/> 
                     <div id="options">
-                        <a href="../logout.php">Sair</a>
+                        <a name="sair" id="sair">oiiii</a>
                     </div>
-                    <a href="../logout.php">Sair</a>
                 </form>
             </div>
     </header>

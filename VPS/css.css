@@ -25,7 +25,7 @@
 .menu form input{ /*font*/
     font-family: 'Bold 700' 'Noto Sans', sans-serif;
 }
-.menu form input[name="home"]{
+.menu form input[name="vps"]{
     background-color: rgba(34, 34, 34, 0.5);
 }
 .menu form input:hover {
