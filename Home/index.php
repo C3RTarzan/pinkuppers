@@ -1,10 +1,6 @@
 <?php
 session_start();
 include('../verificar_login.php');
-if($_SESSION['nome_cargo'] != 'user'){
-    header('Location: ../Home/index.php');
-    exit();
-}
 ?>
 
 
@@ -20,6 +16,7 @@ if($_SESSION['nome_cargo'] != 'user'){
     <meta name="keywords" content="palavra,chave,site">
     <link href="css.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/4095fc3d99.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script type="text/javascript" src="script.js"></script>
 
@@ -45,11 +42,15 @@ if($_SESSION['nome_cargo'] != 'user'){
                     <input type="Button" name="task" value="UP/DOWN" onclick="redireUpDown()"/>
                     <input type="Button" name="hardware" value="HARDWARE" onclick="redireHardWare()"/>
                     <input type="Button" name="dark" value="DARK" onclick="redireDark()"/>
-                    <input type="Button" name="option" value=":" for="options" id="option"/> 
+                    
+                    <input type="Button" name="option" value=":" for="options" id="option" onclick="menu()"/> 
                     <div id="options">
-                        <a href="../logout.php">Sair</a>
+                        <ul>
+                            <li onclick="redireAcc()"><a>Acc</a></li>
+                            <li onclick="redireOptions()"><a>Opções</a></li>
+                            <li class="exit" onclick="redireExit()"><a>Sair</a></li>
+                        </ul>
                     </div>
-                    <a href="../logout.php">Sair</a>
                 </form>
             </div>
     </header>
