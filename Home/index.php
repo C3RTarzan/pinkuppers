@@ -29,39 +29,47 @@ include('../verificar_login.php');
     -->
     
     <header>
-            <div class="menu">
+            <div id="menu">
+                <div>
+                    <form class="bt_opt">
+                        <input type="Button" name="option" value=":" for="options" id="option" onclick="menu()"/> 
+                    </form>
+                </div>
+                <div id="options">
+                    <ul>
+                        <li onclick="redireAcc()"><a>Acc</a></li>
+                        <li onclick="redireOptions()"><a>Opções</a></li>
+                        <li class="exit" onclick="redireExit()"><a>Sair</a></li>
+                    </ul>
+                </div>
+            </div>   
+            <div id="menuL">
                 <form>
-                    <input type="Button" name="home" value="HOME" onclick="redireHome()"/> 
-                    <input type="Button" name="vps" value="VPS" onclick="redireVPS()"/>
-                    <input type="Button" name="web" value="WEB" onclick="redireWEB()"/>
-                    <input type="Button" name="log" value="LOG" onclick="redireLOG()"/>
-                    <input type="Button" name="btc" value="BTC" onclick="redireBTC()"/>
-                    <input type="Button" name="bot_net" value="Bot-Net" onclick="redireBotNet()"/>
-                    <input type="Button" name="mission" value="Mission"onclick="redireMission()" />
-                    <input type="Button" name="clan" value="CLAN" onclick="redireClan()"/>
-                    <input type="Button" name="task" value="UP/DOWN" onclick="redireUpDown()"/>
-                    <input type="Button" name="hardware" value="HARDWARE" onclick="redireHardWare()"/>
-                    <input type="Button" name="dark" value="DARK" onclick="redireDark()"/>
-                    
-                    <input type="Button" name="option" value=":" for="options" id="option" onclick="menu()"/> 
-                    <div id="options">
-                        <ul>
-                            <li onclick="redireAcc()"><a>Acc</a></li>
-                            <li onclick="redireOptions()"><a>Opções</a></li>
-                            <li class="exit" onclick="redireExit()"><a>Sair</a></li>
-                        </ul>
-                    </div>
+                    <input type="Button" name="home" value="HOME" onclick="redireHome()"/></br>
+                    <input type="Button" name="vps" value="VPS" onclick="redireVPS()"/></br>
+                    <input type="Button" name="web" value="WEB" onclick="redireWEB()"/></br>
+                    <input type="Button" name="log" value="LOG" onclick="redireLOG()"/></br>
+                    <input type="Button" name="btc" value="BTC" onclick="redireBTC()"/></br>
+                    <input type="Button" name="bot_net" value="Bot-Net" onclick="redireBotNet()"/></br>
+                    <input type="Button" name="mission" value="Mission"onclick="redireMission()" /></br>
+                    <input type="Button" name="clan" value="CLAN" onclick="redireClan()"/></br>
+                    <input type="Button" name="task" value="UP/DOWN" onclick="redireUpDown()"/></br>
+                    <input type="Button" name="hardware" value="HARDWARE" onclick="redireHardWare()"/></br>
+                    <input type="Button" name="dark" value="DARK" onclick="redireDark()"/></br>
                 </form>
-            </div>
+                <div id="inff">
+                    <ul>
+                        <a class="ip" name="ip" type="number">111.111.111.111</a></br>
+                        <a class="finance" name="finance" type="number">100.00</a>
+                    </ul>
+                </div>
+            </div>     
     </header>
-    <nav>
-        <div class="inff">
-            <ul>
-                <a name="ip" type="number">111.111.111.111</a></br>
-                <a name="finance" type="number">100.00</a>
-            </ul>
+    <section id="section">
+        <div>
+            <span>Ola mundo</span>
         </div>
-    </nav>
+    </section>
     <!--<div class="Caminho">
         <ul>
             <li><a href="VPS/index.php/">HOME</a></li>
