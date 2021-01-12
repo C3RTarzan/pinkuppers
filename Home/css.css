@@ -19,7 +19,7 @@ body{
 #menuL{
     position: absolute;
     z-index: 5;
-    background-color: rgb(180, 180, 180);
+    background-color: #7b1346;
     width: 150px;
     height: 100%;
     float: right;
@@ -29,6 +29,7 @@ body{
     margin-top: 80px;
 }
 #menuL form input{
+    background-image: url("../button.png");
     margin-bottom: 0;
     cursor: pointer;
     width: 100%;
@@ -40,26 +41,38 @@ body{
     background-color: rgba(255, 255, 255, 0.5);
 }
 #menuL form input[name="home"]{
-    background-color: rgba(34, 34, 34, 0.5);
+    background-image: url("../buttonOn.png");
 }
-#menuL form input:hover {
-    border-style: solid;
-    border-radius: 1px;
+#menuL form input:hover{
+    background-image: url("../buttonSL.png");
 }
 
 /*-------------------------------------*/
 
 #options{
-    display: none;
+    position: absolute;
+    right: 0;
+    display: block;
     z-index: 10;
+    width: 80px;
+    height: 94px;
     background-color: rgb(255, 255, 255);  
-    right: 50px;
-    top: 0;
+    top: 80px;
 }
 #options ul{
+    padding: 0;
+    cursor:pointer;
+    
 
 }
 #options ul li{
+    height: 30px;
+    background-color: rgb(173, 173, 173);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1px;
     list-style:none;
 } 
 
@@ -81,7 +94,7 @@ body{
 /*-------------------------------------*/
 
 #inff{
-    background-color: burlywood;
+    background-image: url("../ipBC.png");
     height: 50px;
 }
 #inff ul{
@@ -89,6 +102,7 @@ body{
     padding-left:0;
 }
 #inff ul a{
+    cursor:Default;
     position: relative;
     list-style:none;
     text-decoration: none;
@@ -106,7 +120,7 @@ body{
 #section{
     position: absolute;
     z-index: 0;
-    background-color: cyan;
+    background-color: #7b1346;
     width: 100%;
     height: 100%;
 }
