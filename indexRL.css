@@ -140,6 +140,10 @@ body {
     margin-bottom: 15px;
     color: rgb(192, 192, 192);  
 }
+.box2 input[type="email"]{
+    transition-duration: 0.4s;
+    color: rgb(192, 192, 192);  
+}
 .box2 input[type="password"]:focus{
     outline: 0;
 
