@@ -59,7 +59,7 @@ include('../verificar_login.php');
                 </form>
                 <div id="inff">
                     <ul>
-                        <a class="ip" name="ip" type="number">111.111.111.111</a></br>
+                        <a class="ip" name="ip" type="number"><?php echo $_SESSION['nome_ip']; ?></a></br>
                         <a class="finance" name="finance" type="number">100.00</a>
                     </ul>
                 </div>

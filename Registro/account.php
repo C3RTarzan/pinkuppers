@@ -23,6 +23,30 @@ if(empty($_POST['nick']) || empty($_POST['senha'])){ //checar se tem campos em b
     exit();
  }
 
+ $gameIP1 = rand(0, 255);
+ $gameIP2 = rand(0, 255);
+ $gameIP3 = rand(0, 255);
+ $gameIP4 = rand(0, 255);
+ 
+ $gameIP = $gameIP1 . '.' . $gameIP2 . '.' . $gameIP3 . '.' . $gameIP4;
+ 
+ while(true){
+     $query_verificar_ip = "select * from usuarios where ip = '$gameIP'";
+     $result_verificar_ip = mysqli_query($conexao, $query_verificar_ip);
+     $row_verificar_ip = mysqli_num_rows($result_verificar_ip);
+ 
+     if($row_verificar_ip > 0){
+         $gameIP1 = rand(0, 255);
+         $gameIP2 = rand(0, 255);
+         $gameIP3 = rand(0, 255);
+         $gameIP4 = rand(0, 255);
+ 
+         $gameIP = $gameIP1 . '.' . $gameIP2 . '.' . $gameIP3 . '.' . $gameIP4;
+     }else{
+         break;
+     }
+ }
+
  
  if(isset($_POST['register'])){
     $usuario =  trim($_POST['nick']);  // criando variavel
@@ -30,8 +54,8 @@ if(empty($_POST['nick']) || empty($_POST['senha'])){ //checar se tem campos em b
     $email =  trim($_POST['email']);  // criando variavel
     $cargo = 'user';
     $senhaMD5=MD5($senha);
-    
-    $query = "INSERT into usuarios (nick, senha, email, cargo) VALUES ('$usuario', '$senhaMD5', '$email', '$cargo');"; //consulta com bd
+
+    $query = "INSERT into usuarios (nick, senha, email, cargo, ip) VALUES ('$usuario', '$senhaMD5', '$email', '$cargo', '$gameIP')"; //consulta com bd
 
     
 
@@ -41,7 +65,6 @@ if(empty($_POST['nick']) || empty($_POST['senha'])){ //checar se tem campos em b
     $row_verificar = mysqli_num_rows($result_verificar); // verificar se existe uma linha
 
     if($row_verificar > 0){
-        echo "<script language='javascript' type='text/javascript'>alert('Nick já Cadastrado!')</script>";
         $_SESSION['nao_autentificado'] = true;
         header('Location: index.php'); // se for para onde vai ser redirecionado
         exit();
