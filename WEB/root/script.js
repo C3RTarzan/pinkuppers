@@ -41,6 +41,9 @@ function redireExit(){
 function redireAcc(){
     window.location.href = "../Acont/index.php";
 }
+function busca(){
+    window.location.href = "web.php";
+}
 
 function menu(){
     let mn = document.getElementById("options");

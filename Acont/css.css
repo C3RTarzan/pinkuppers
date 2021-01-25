@@ -64,7 +64,7 @@ body{
     background-color: rgba(255, 255, 255, 0.5);
 }
 #menuL form input[name="home"]{
-    background-image: url("../buttonOn.png");
+    background-image: url("../button.png");
 }
 #menuL form input:hover{
     background-image: url("../buttonSL.png");
@@ -75,7 +75,7 @@ body{
 #options{
     position: absolute;
     right: 0;
-    display: block;
+    display: none;
     z-index: 10;
     width: 80px;
     height: 94px;
@@ -97,7 +97,7 @@ body{
     justify-content: center;
     margin-top: 1px;
     list-style:none;
-}
+} 
 
 /*-------------------------------------*/
 
@@ -140,6 +140,10 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-#section div span{
-    
+#section div div{
+    margin-top: 0px;;
+    margin-right: 150px;
+    background-color: rgb(202, 202, 202);
+    width: 90%;
+    height: 500px;
 }

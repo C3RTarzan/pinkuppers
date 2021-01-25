@@ -1,59 +1,172 @@
 *{
     margin: 0;
-    margin-left: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace; 
 }
+body{
+    background-color: #7b1346;
+}
+/*-------------------------------------*/
 
-.menu{
-    background-color: thistle;
-    height: 50px;
-    font-size: 10px;
+#menu{
+    position: absolute;
+    z-index: 6;
+    background-image: url("../Top_Home.png");
+    background-repeat: repeat;
+    width: 100%;
+    height: 80px;
 }
-.menu form input{
-    cursor: pointer;
-    width: 6%;
+.bt_opt{
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 15px; 
+}
+.bt_opt input{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50px;
+    height: 40px;
+}
+.bt_opt input:focus{
+    outline: none;
+}
+.logo{
+    position: absolute;
+    width: 50px;
     height: 50px;
+    left: 40px;
+    top: 15px;
+    background-image: url("../logo.png");
+    background-repeat: no-repeat;
+}
+/*-------------------------------------*/
+
+#menuL{
+    position: absolute;
+    z-index: 5;
+    background-color: #7b1346;
+    width: 150px;
+    height: 100%;
+    float: right;
+    
+}
+#menuL form{
+    margin-top: 80px;
+}
+#menuL form input{
+    background-image: url("../button.png");
+    margin-bottom: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
     border-style: none;
     outline-style: none;
     border-radius: 1px;
-    outline-color: olive;  
     font-family: verdana;
-    background-color: rgba(255, 255, 255, 0.5);  
+    background-color: rgba(255, 255, 255, 0.5);
 }
-.menu form input{ /*font*/
-    font-family: 'Bold 700' 'Noto Sans', sans-serif;
+#menuL form input[name="vps"]{
+    background-image: url("../buttonOn.png");
 }
-.menu form input[name="vps"]{
-    background-color: rgba(34, 34, 34, 0.5);
-}
-.menu form input:hover {
-    border-style: solid;
-    border-radius: 1px;
-}
-.inff{
-    background-color: lightcoral;
-    height: 80px;
-}
-.inff ul{
-    cursor: default;
-    background-color: blue;
-    float: right;
+#menuL form input:hover{
+    background-image: url("../buttonSL.png");
 }
 
+/*-------------------------------------*/
 
-
-/*Options*/
 #options{
+    position: absolute;
+    right: 0;
     display: none;
-    font-size: 25px;
-    left: 100px;
+    z-index: 10;
+    width: 80px;
+    height: 94px;
+    background-color: rgb(255, 255, 255);  
+    top: 80px;
 }
-#option:focus ~ #options {
-    display:block;
+#options ul{
+    padding: 0;
+    cursor:pointer;
     
- }
- .menu form input:checked {
-    background-color: rgba(250, 0, 0, 0.5);
+
+}
+#options ul li{
+    height: 30px;
+    background-color: rgb(173, 173, 173);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1px;
+    list-style:none;
+} 
+
+/*-------------------------------------*/
+
+#inff{
+    background-image: url("../ipBC.png");
+    height: 50px;
+}
+#inff ul{
+    padding-top: 15px;;
+    padding-left:0;
+}
+#inff ul a{
+    cursor:Default;
+    position: relative;
+    list-style:none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    line-height: 2px;
+}
+.finance{
+    color: rgb(3, 49, 3);
+}
+.ip{
+}
+
+/*-------------------------------------*/
+#section {
+    margin-left: 150px ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#section .header{
+    margin-top: 80px ;
+    background-color: aqua;
+    width: 90%; 
+    height: 50px;
+}
+#section .section{
+    background-color: rgb(252, 244, 0);
+    width: 90%; 
+    height: 450px;
+}
+#section .section .corpo-log{
+    
+}
+#section .section .corpo-log-top{
+    background-color: blueviolet;
+    height: 30px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+#section .section .corpo-log-bot{
+    background-color: coral;
+    height: 400px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+#section .section .corpo-log-bot input[value="LOG"]{
+    border: none;
+    outline: 0;
+    width: 98.9%;
+    height: 90%;
+}
+#section .section .corpo-log-bot input[placeholder="c:>"]{
+    border: none;
+    outline: 0;
+    width: 98.9%;
+    height: 8%;
 }

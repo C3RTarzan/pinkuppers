@@ -68,7 +68,32 @@ include('../verificar_login.php');
     </header>
     <section id="section">
         <div>
-            <span>Ola mundo</span>
+            <div>
+                <div>
+                    <div class="cabe">
+                        <form method="POST" action="web.php">
+                            <input type="button" value="○">
+                            <input class="buscaip" type="text" placeholder="Pesquisar por IP ou digitar URL" name="ipweb" require maxlength="15" autocomplete="off" value="<?php echo $_SESSION['web_ip'] ?>">
+                            <i class="fa fa-search" type="submit" name="buscar"></i>
+                        </form>
+                    </div>
+                    <div class="logar">
+                        <div>
+                            <div>
+                                <span> <?php echo $_SESSION['web_ip'] ?> </span>
+                                <i class="fa fa-window-close" aria-hidden="true"></i>
+                            </div>
+                            <form method="POST" action="root.php">
+                                <label for="nome">User:</label>
+                                <input name="user" class="labb" type="text" require maxlength="10" autocomplete="off"><br/>
+                                <label for="nome">Senha:</label>
+                                <input name="pass" class="labb" type="password" require maxlength="10" autocomplete="off"><br/>
+                                <input type="submit" name="logar" value="Logar">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!--<div class="Caminho">

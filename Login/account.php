@@ -17,12 +17,7 @@ $dado = mysqli_fetch_array($result); // extrair dados da tabela sql
 $row = mysqli_num_rows($result); // verificar se existe uma linha
 
 if($row > 0){
-    $_SESSION['id'] = $dado["id"];
-    $_SESSION['usuario'] = $usuario;
-    $_SESSION['nome_usuario'] = $dado["nick"]; //receber o nick
-    $_SESSION['nome_cargo'] = $dado["cargo"]; //receber o cargo
-    $_SESSION['nome_email'] = $dado["email"]; //receber o email
-    $_SESSION['nome_ip'] = $dado["ip"]; //receber o ip
+    include '../class/webcreatelogin.php';
 
     if($_SESSION['nome_cargo'] == 'admin'){ // verificar cargo
         header('Location: ../painel_admin.php'); // se for para onde vai ser redirecionado

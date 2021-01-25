@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('../verificar_login.php');
+include '../class/usersLocal.php';
 ?>
 
 
@@ -68,7 +69,16 @@ include('../verificar_login.php');
     </header>
     <section id="section">
         <div>
-            <span>Ola mundo</span>
+            <div>
+                <h3> Usuário: <?php echo $_SESSION['nome_usuario']; ?> </h3>
+                <h3> Cargo: <?php echo $_SESSION['nome_cargo']; ?> </h3>
+                <h3> E-mail: <?php echo $_SESSION['nome_email']; ?> </h3><br/>
+                <h3> VPS User: <?php echo $_SESSION['local_user']; ?> </h3>
+                <h3> VPS Pass: <?php echo $_SESSION['local_pass']; ?> </h3><br/>
+                <form action="changer.php" method="POST">
+                    <input name="mdup" type="submit" value="Mudar user/pass VPS">
+                </form>
+            </div>
         </div>
     </section>
     <!--<div class="Caminho">

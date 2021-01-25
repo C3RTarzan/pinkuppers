@@ -31,3 +31,27 @@ function redireHardWare(){
 function redireDark(){
     window.location.href = "../Dark/index.php";
 }
+
+function redireOptions(){
+    window.location.href = "../Options/index.php";
+}
+function redireExit(){
+    window.location.href = "../logout.php";
+}
+function redireAcc(){
+    window.location.href = "../Acont/index.php";
+}
+
+function menu(){
+    let mn = document.getElementById("options");
+    let mnv = getComputedStyle(mn, null).getPropertyValue("display");;
+    if(mnv == 'none'){
+        document.getElementById("option").style.background = 'rgb(131, 131, 131)';
+        document.getElementById("options").style.display = "block";
+    }
+    if(mnv == 'block'){
+        document.getElementById("option").style.background = ' rgba(255, 255, 255, 0.5)';
+        document.getElementById("options").style.display = "none";
+    }
+    
+}
