@@ -10,11 +10,8 @@ $result_pri = mysqli_query($conexao, $query_pri); // juntas os 2
 $dado_pri = mysqli_fetch_array($result_pri); // extrair dados da tabela sql
 $row_pri = mysqli_num_rows($result_pri);
 
-if(!$row_pri > 0){
-    header('Location: erro.php');
-}
-if($_SESSION['web_root'] == true){
-    header('Location: root/index.php');
+if($row_pri > 0){
+    header('Location: index.php');
 }
 ?>
 
@@ -98,22 +95,7 @@ if($_SESSION['web_root'] == true){
                                 <span> <?php echo $_SESSION['web_ip'] ?> </span>
                                 <i class="fa fa-window-close" aria-hidden="true"></i>
                             </div>
-                            <ul>
-                                <?php
-                                    if(isset($_SESSION['web_root_pass'])): ?>
-                                    <p><small><small>User/Senha invalidos.</small></small></p>   
-                                <?php
-                                    endif;
-                                    unset($_SESSION['web_root_pass']);
-                                ?>
-                            </ul>
-                            <form method="POST" action="root.php">
-                                <label for="nome">User:</label>
-                                <input name="user" class="labb" type="text" require maxlength="10" autocomplete="off"><br/>
-                                <label for="nome">Senha:</label>
-                                <input name="pass" class="labb" type="password" require maxlength="10" autocomplete="off"><br/>
-                                <input type="submit" name="logar" value="Logar">
-                            </form>
+                            <span>Error 404 Not Found</span>
                         </div>
                     </div>
                 </div>

@@ -1,45 +1,45 @@
 function redireHome(){
-    window.location.href = "../Home/index.php";
+    window.location.href = "../../Home/index.php";
 }
 function redireVPS(){
-    window.location.href = "../VPS/index.php";
+    window.location.href = "../../VPS/index.php";
 }
 function redireWEB(){
-    window.location.href = "../WEB/index.php";
+    window.location.href = "../../WEB/index.php";
 }
 function redireLOG(){
-    window.location.href = "../LOG/index.php";
+    window.location.href = "../../LOG/index.php";
 }
 function redireBTC(){
-    window.location.href = "../BTC/index.php";
+    window.location.href = "../../BTC/index.php";
 }
 function redireBotNet(){
-    window.location.href = "../BotNet/index.php";
+    window.location.href = "../../BotNet/index.php";
 }
 function redireMission(){
-    window.location.href = "../Mission/index.php";
+    window.location.href = "../../Mission/index.php";
 }
 function redireClan(){
-    window.location.href = "../Clan/index.php";
+    window.location.href = "../../Clan/index.php";
 }
 function redireUpDown(){
-    window.location.href = "../UpDown/index.php";
+    window.location.href = "../../UpDown/index.php";
 }
 function redireHardWare(){
-    window.location.href = "../HardWare/index.php";
+    window.location.href = "../../HardWare/index.php";
 }
 function redireDark(){
-    window.location.href = "../Dark/index.php";
+    window.location.href = "../../Dark/index.php";
 }
 
 function redireOptions(){
-    window.location.href = "../Options/index.php";
+    window.location.href = "../../Options/index.php";
 }
 function redireExit(){
-    window.location.href = "../logout.php";
+    window.location.href = "../../logout.php";
 }
 function redireAcc(){
-    window.location.href = "../Acont/index.php";
+    window.location.href = "../../Acont/index.php";
 }
 function busca(){
     window.location.href = "web.php";

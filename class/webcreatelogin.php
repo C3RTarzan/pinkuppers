@@ -9,6 +9,7 @@ $_SESSION['nome_email'] = $dado["email"]; //receber o email
 $_SESSION['nome_ip'] = $dado["ip"]; //receber o ip
 $_SESSION['nome_finance'] = $dado["finance"]; //dinheiro do usuario
 $_SESSION['web_ip'] = '1.1.1.1'; //ip do web
+$_SESSION['web_root'] = false;
 
 
 include '../webIps.php';

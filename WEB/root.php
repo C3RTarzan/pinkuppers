@@ -23,11 +23,11 @@ if($row_pri > 0){
         $row = mysqli_num_rows($result);
     }
     if($row > 0){
-        echo "<script language='javascript' type='text/javascript'>alert('Entrou')</script>";
+        $_SESSION['web_root'] = true;
+        header('Location: root/index.php');
     }else{
-        echo "<script language='javascript' type='text/javascript'>alert('Senha/User incorreto')</script>";
-}
-}else{
-    echo "<script language='javascript' type='text/javascript'>alert('IP não encontrado')</script>";
+        $_SESSION['web_root_pass'] = true;
+        header('Location: root/index.php');
+    }
 }
 
