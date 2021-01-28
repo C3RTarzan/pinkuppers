@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('../verificar_login.php');
+include('../class/users.php');
 include '../class/usersLocal.php';
 ?>
 

@@ -17,9 +17,7 @@ if($row_pri > 0){
     if(is_numeric($tratado)){
         $_SESSION['web_ip'] = $valor;
         header('Location: index.php');
-        echo "foi";
     }else{
-        echo "n foi";
         header('Location: index.php');
     }
 }else{
@@ -30,9 +28,7 @@ if($row_pri > 0){
     if(is_numeric($tratado)){
         $_SESSION['web_ip'] = $valor;
         header('Location: erro.php');
-        echo "foi";
     }else{
-        echo "n foi";
         header('Location: index.php');
     }
 }

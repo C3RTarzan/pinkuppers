@@ -1,6 +1,8 @@
 <?php
 session_start();
 include('../verificar_login.php');
+include('../class/users.php');
+include '../class/log.php';
 ?>
 
 
@@ -76,10 +78,10 @@ include('../verificar_login.php');
                     <i class="fa fa-window-close" aria-hidden="true"></i>
                 </div>
                 <div class="corpo-log-bot">
-                    <form>
-                        <textarea id="msg" readonly=“true”><?php echo "Ola"?></textarea>
+                        <textarea id="msg" readonly=“true”><?php echo $_SESSION['log']; echo $_SESSION['log_help'] ?></textarea>
                         <input type="text" placeholder="  c:>" readonly=“true”>
-                        <input type="text" require maxlength="15" autocomplete="off">
+                    <form method="POST" action="log.php">
+                        <input name="barra" type="text" require maxlength="15" autocomplete="off">
                     </form>
                 </div>
             </div>
@@ -89,49 +91,9 @@ include('../verificar_login.php');
             </div>
         </div>
     </section>
-    <!--<div class="Caminho">
-        <ul>
-            <li><a href="VPS/index.php/">HOME</a></li>
-            <li><a href="VPS/index.php/">VPS</a></li>
-            <li><a href="VPS/index.php/">WEB</a></li>         
-        </ul>
-    </div>
-    <section id="conteudo"></section>-->
-
-    <!--<script>
-        document.querySelectorAll('a').forEach(link => {
-            const conteudo = document.getElementById('conteudo');
-            link.onclick = function(e){
-                e.preventDefault()
-                fetch(link.href)
-                    .then(resp => resp.text())
-                    .then(html => conteudo.innerHTML = html)
-            }
-        })
-    </script>-->
-
-    <!--<section>
-        <div class="info">
-            <ul>
-                <li>SISTEMA: </li>
-                <li>NOME</li>
-                <li>VERSÃO</li>
-                <li>MEMORIA RAM</li>
-                <li>PROCESSADOR</li>
-            </ul>
-        </div>
-        <div class="cmd">
-            <div class="cmds">
-                <span>c:\></span>
-        </div>
-        <div class="fod">
-            <ul>
-                <li>NOME.EXE</li>
-                <li>NOME.EXE</li>
-                <li>NOME.EXE</li>
-            </ul>
-        </div>
-    </section>-->
+<?php 
+    $_SESSION['log_help'] = '';
+?>
 
 </body>
 </html>

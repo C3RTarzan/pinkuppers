@@ -24,10 +24,11 @@ if($row_pri > 0){
     }
     if($row > 0){
         $_SESSION['web_root'] = true;
+        include 'root/log.php';
         header('Location: root/index.php');
     }else{
         $_SESSION['web_root_pass'] = true;
-        header('Location: root/index.php');
+        header('Location: index.php');
     }
 }
 

@@ -1,6 +1,4 @@
 <?php
-session_start();
-include('class/users.php');
 
 function generateRandomStringUser($size = 6){
     $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuwxyz0123456789";
