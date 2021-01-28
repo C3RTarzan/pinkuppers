@@ -18,7 +18,7 @@ if( $cdg == 'CLEAR' || $cdg == 'LIMPAR'){
 if( $cdg == 'HELP' || $cdg == '-HELP' || $cdg == 'AJUDA'){
     $_SESSION['log_help'] = '
 -------------------
-- clear    //Limpa o log
+- clear    //Limpar log
 - -i    //Limpar somente os ips';
     header('Location: index.php');
     die();

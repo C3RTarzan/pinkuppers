@@ -3,7 +3,10 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #7b1346;
+    background: linear-gradient(0, #120c56, #000000);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 /*-------------------------------------*/
 
@@ -43,7 +46,7 @@ body{
 #menuL{
     position: absolute;
     z-index: 5;
-    background-color: #7b1346;
+    background: linear-gradient(0, #120c56, #000000);
     width: 150px;
     height: 100%;
     float: right;
@@ -138,12 +141,12 @@ body{
 }
 #section .header{
     margin-top: 80px ;
-    background-color: aqua;
+    background-color: rgb(133, 133, 133);
     width: 90%; 
     height: 50px;
 }
 #section .section{
-    background: linear-gradient(0, #120c56, #000000);
+    background: linear-gradient(0, #4b4b4b, #000000);
     width: 90%; 
     height: 450px;
 }
@@ -151,10 +154,20 @@ body{
     
 }
 #section .section .corpo-log-top{
+    position: relative;
     background-color: blueviolet;
     height: 30px;
     margin-left: 15%;
     margin-right: 15%;
+}
+#section .section .corpo-log-top i{
+    position: absolute;
+    right: 7px;
+    top: 6.5px;
+}
+#section .section .corpo-log-top i:hover{
+    cursor: Pointer;
+    color: rgb(9, 9, 9);
 }
 #section .section .corpo-log-bot{
     position: relative;
@@ -181,7 +194,7 @@ body{
     left: 4%;
     width: 96%;
     height: 8%;
-    bottom: 0px;;
+    bottom: 0px;
 }
 #section .section .corpo-log-bot input[placeholder="  c:>"]{
     position: absolute;

@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    include '../verificar_logado.php'
 ?>
 
 <!DOCTYPE html>

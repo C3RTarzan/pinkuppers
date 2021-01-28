@@ -3,7 +3,10 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #7b1346;
+    background: linear-gradient(0, #120c56, #000000);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 /*-------------------------------------*/
 
@@ -43,7 +46,7 @@ body{
 #menuL{
     position: absolute;
     z-index: 5;
-    background-color: #7b1346;
+    background: linear-gradient(0, #120c56, #000000);
     width: 150px;
     height: 100%;
     float: right;
@@ -133,65 +136,9 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-#section .header{
-    margin-top: 80px ;
-    background-color: aqua;
-    width: 90%; 
-    height: 50px;
-}
 #section .section{
-    background: linear-gradient(0, #120c56, #000000);
+    background-color: aquamarine;
+    margin-top: 80px;
     width: 90%; 
-    height: 450px;
-}
-#section .section .corpo-log{
-    
-}
-#section .section .corpo-log-top{
-    background-color: blueviolet;
-    height: 30px;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-#section .section .corpo-log-bot{
-    position: relative;
-    background-color: rgb(131, 185, 194);
-    height: 400px;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-#section .section .corpo-log-bot textarea{
-    position: absolute;
-    border: none;
-    background-color: rgb(22, 22, 22);
-    color: chartreuse;
-    outline: 0;
-    width: 100%;
-    height: 92%;
-}
-#section .section .corpo-log-bot input[autocomplete="off"]{
-    position: absolute;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    color: cornsilk;
-    outline: 0;
-    left: 4%;
-    width: 96%;
-    height: 8%;
-    bottom: 0px;;
-}
-#section .section .corpo-log-bot input[placeholder="  c:>"]{
-    position: absolute;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    outline: 0;
-    width: 4%;
-    height: 8%;
-    bottom: 0px;;
-}
-#section .section .corpo-log-bot textarea{
-    position: absolute;
-    border: none;
-    resize: none;
-    outline: 0;
+    height: 500px;
 }

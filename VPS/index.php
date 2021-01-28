@@ -67,26 +67,8 @@ include('../verificar_login.php');
             </div>     
     </header>
     <section id="section">
-        <div class="header">
-
-        </div>
         <div class="section">
-            <div class="corpo-log">
-                <div class="corpo-log-top">
-                    <i class="fa fa-window-close" aria-hidden="true"></i>
-                </div>
-                <div class="corpo-log-bot">
-                    <form>
-                        <textarea id="msg" readonly=“true”><?php echo "Ola"?></textarea>
-                        <input type="text" placeholder="  c:>" readonly=“true”>
-                        <input type="text" require maxlength="15" autocomplete="off">
-                    </form>
-                </div>
-            </div>
-
-            <div class="corpo-dir">
-
-            </div>
+            
         </div>
     </section>
     <!--<div class="Caminho">

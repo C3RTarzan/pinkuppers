@@ -75,7 +75,7 @@ include '../class/log.php';
         <div class="section">
             <div class="corpo-log">
                 <div class="corpo-log-top">
-                    <i class="fa fa-window-close" aria-hidden="true"></i>
+                    <i class="fa fa-window-close" aria-hidden="true" onclick="redireHome()"></i>
                 </div>
                 <div class="corpo-log-bot">
                         <textarea id="msg" readonly=“true”><?php echo $_SESSION['log']; echo $_SESSION['log_help'] ?></textarea>

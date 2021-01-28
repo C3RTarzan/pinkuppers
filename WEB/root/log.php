@@ -1,25 +1,36 @@
 <?php
 session_start();
 include('../../class/users.php');
-
+include '../../class/rootlog.php';
 $id = $_SESSION['id'];
-$ip = $_SESSION['nome_ip'];
-$inv_ip = $_SESSION['web_ip'];
+$_SESSION['log_help'] = '';
 
-$query = "select * from web where ip = '{$inv_ip}'";
-$result = mysqli_query($conexao, $query);
-$dado = mysqli_fetch_array($result);
-$_SESSION['inv_id'] = $dado["userid"];
+$cdg = $_POST['barra'];
+$cdg = strtoupper($cdg);
+$log = $_SESSION['log'];
 $inv_id = $_SESSION['inv_id'];
 
-$query1 = "select * from log where userid = '{$inv_id}'";
-$result1 = mysqli_query($conexao, $query1);
-$dado1 = mysqli_fetch_array($result1);
+if( $cdg == 'CLEAR' || $cdg == 'LIMPAR'){
+    $valor = 'Digite -help para ajuda...';
+    $query = "UPDATE log SET log = '$valor' WHERE userid = '$inv_id'";
+    $result = mysqli_query($conexao, $query);
+    header('Location: logs.php');
+    die();
+}
+if( $cdg == 'HELP' || $cdg == '-HELP' || $cdg == 'AJUDA'){
+    $_SESSION['log_help'] = '
+-------------------
+- clear    //Limpar log
+- -i    //Limpar somente os ips';
+    header('Location: logs.php');
+    die();
+}
 
-$_SESSION['inv_log'] = $dado1["log"];
-$inv_log = $_SESSION['inv_log'];
+$_SESSION['log_help'] = '
+ERRO, comando não reconhecido.';
+header('Location: logs.php');
 
-$query2 = "UPDATE log SET log = '$inv_log'
-'\n' 'Ip ' '$ip' ' logou na sua rede.' WHERE userid = '$inv_id'";
-$result = mysqli_query($conexao, $query2);
+
+
+
 ?>

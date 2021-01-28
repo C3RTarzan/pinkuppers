@@ -1,7 +1,8 @@
 <?php
 session_start();
-include('../../verificar_login.php');
 include('../../class/users.php');
+include('../../verificar_login.php');
+include '../../class/rootlog.php';
 
 if (!$_SESSION['web_root'] == true){
     header('Location: ../index.php');
@@ -73,28 +74,31 @@ if (!$_SESSION['web_root'] == true){
         </header>
         <section id="section">
             <div>
-                <div>
-                    <div>
-                        <div class="cabe">
-                            <form method="POST" action="web.php">
-                                <input type="button" value="○">
-                                <input class="buscaip" type="text" placeholder="Pesquisar por IP ou digitar URL" name="ipweb" require maxlength="15" autocomplete="off" value="<?php echo $_SESSION['web_ip'] ?>" readonly>
-                                <i class="fa fa-search" type="submit" name="buscar"></i>
-                            </form>
+                <div class="pai">
+                    <div class="cabe">
+                        <form method="POST" action="web.php">
+                            <input type="button" value="○">
+                            <input class="buscaip" type="text" placeholder="Pesquisar por IP ou digitar URL" name="ipweb" require maxlength="15" autocomplete="off" value="<?php echo $_SESSION['web_ip'] ?>" readonly>
+                            <i class="fa fa-search" type="submit" name="buscar"></i>
+                        </form>
+                    </div>
+                    <div class="body">
+                        <div class="cade_body">
+                            <i class="fa fa-window-close" aria-hidden="true"></i>
                         </div>
-                        <div class="logar">
-                            <div>
-                                <div>
-                                    <i class="fa fa-window-close" aria-hidden="true"></i>
-                                </div>
-                                <form method="POST" action="web.php">
-                                    <input type="submit" value="Sair">
-                                </form>
-                            </div>
+                        <div class="body_body">
+                            <textarea id="msg" readonly=“true”><?php echo $_SESSION['inv_log']; echo $_SESSION['log_help'] ?></textarea>
+                            <input type="text" placeholder="  c:>" readonly=“true”>
+                            <form method="POST" action="log.php">
+                                <input name="barra" type="text" require maxlength="15" autocomplete="off">
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <?php 
+            $_SESSION['log_help'] = '';
+        ?>
     </body>
 </html>
