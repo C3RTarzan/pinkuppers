@@ -1,6 +1,6 @@
 <?php   
     session_start();
-    include '../verificar_logado.php'
+    include '../verificar_logado.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -20,8 +20,8 @@
     <div class="aa">
         <h2>Login</h2>
         <form class="box" method="POST" action="account.php">
-            <input type="use" name="nick" placeholder=" Nick" require maxlength="15" autocomplete="off"/><br>
-            <input type="password" name="senha" placeholder=" Senha" require maxlength="15" autocomplete="off"/><br>
+            <input type="use" name="nick_login" placeholder=" Nick" require maxlength="15" autocomplete="off"/><br>
+            <input type="password" name="senha_login" placeholder=" Senha" require maxlength="15" autocomplete="off"/><br>
             <input type="submit" name="login" value="Login" autocomplete="off"/>
         </form></br>
         <a href="../Registro/index.php">Ainda não é inscrito? <strong>Cadastre-se!</strong></a>

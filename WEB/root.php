@@ -25,7 +25,7 @@ if($row_pri > 0){
     if($row > 0){
         $_SESSION['web_root'] = true;
         include '../class/inv_log.php';
-        header('Location: root/logs.php');
+        header('Location: root/index.php');
     }else{
         $_SESSION['web_root_pass'] = true;
         header('Location: index.php');

@@ -78,10 +78,9 @@ include '../class/log.php';
                     <i class="fa fa-window-close" aria-hidden="true" onclick="redireHome()"></i>
                 </div>
                 <div class="corpo-log-bot">
-                        <textarea id="msg" readonly=“true”><?php echo $_SESSION['log']; echo $_SESSION['log_help'] ?></textarea>
-                        <input type="text" placeholder="  c:>" readonly=“true”>
                     <form method="POST" action="log.php">
-                        <input name="barra" type="text" require maxlength="15" autocomplete="off">
+                        <textarea name="log" id="msg" ><?php echo $_SESSION['log']?></textarea>
+                        <input type="submit" name="save" value="Salvar">
                     </form>
                 </div>
             </div>

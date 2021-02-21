@@ -67,11 +67,9 @@ include('../verificar_login.php');
             </div>     
     </header>
     <section id="section">
-        <div class="section">
+        <div>
             <div>
-                <div class="itens">
-                        <?php include 'itens.php'?>
-                </div>
+                <span>oiiiii</span>     
             </div>
         </div>
     </section>

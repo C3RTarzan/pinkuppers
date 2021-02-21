@@ -1,14 +1,17 @@
 <?php
 session_start();
 include('../class/users.php');
-if(empty($_POST['nick']) || empty($_POST['senha'])){ //checar se tem campos em branco
+
+//verification
+if(empty($_POST['nick_login']) || empty($_POST['senha_login'])){ //checar se tem campos em branco
     $_SESSION['campos_branco'] = true;
     header('Location: index.php');
     exit();
 }
 
-$usuario = mysqli_real_escape_string($conexao, $_POST['nick']);  // criando variavel
-$senha = mysqli_real_escape_string($conexao,$_POST['senha']);  // criando variavel
+//login
+$usuario = mysqli_real_escape_string($conexao, $_POST['nick_login']);  // criando variavel
+$senha = mysqli_real_escape_string($conexao,$_POST['senha_login']);  // criando variavel
 $senhaMD5=MD5($senha);
 $query = "select * from usuarios where nick = '{$usuario}' and senha = '{$senhaMD5}'"; //consulta com bd
 
@@ -34,12 +37,6 @@ if($row > 0){
     header('Location: index.php'); // se for para onde vai ser redirecionado
     exit();
 }
-
-
-
-
-
-
 
 
 ?>

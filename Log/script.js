@@ -8,7 +8,7 @@ function redireWEB(){
     window.location.href = "../WEB/index.php";
 }
 function redireLOG(){
-    window.location.href = "../LOG/index.php";
+    window.location.href = "../Log/index.php";
 }
 function redireBTC(){
     window.location.href = "../BTC/index.php";

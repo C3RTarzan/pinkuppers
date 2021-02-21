@@ -8,7 +8,7 @@ function redireWEB(){
     window.location.href = "../../WEB/index.php";
 }
 function redireLOG(){
-    window.location.href = "../../LOG/index.php";
+    window.location.href = "../../Log/index.php";
 }
 function redireBTC(){
     window.location.href = "../../BTC/index.php";
@@ -41,8 +41,8 @@ function redireExit(){
 function redireAcc(){
     window.location.href = "../../Acont/index.php";
 }
-function busca(){
-    window.location.href = "web.php";
+function rediclose(){
+    window.location.href = "close.php";
 }
 
 function menu(){

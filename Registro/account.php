@@ -49,9 +49,9 @@ if(empty($_POST['nick']) || empty($_POST['senha'])){ //checar se tem campos em b
 
  
  if(isset($_POST['register'])){
-    $usuario =  trim($_POST['nick']);  // criando variavel
-    $senha = trim($_POST['senha']);  // criando variavel
-    $email =  trim($_POST['email']);  // criando variavel
+    $usuario = mysqli_real_escape_string($conexao, trim($_POST['nick']));  // criando variavel
+    $senha = mysqli_real_escape_string($conexao, trim($_POST['senha']));  // criando variavel
+    $email =  mysqli_real_escape_string($conexao, trim($_POST['email']));  // criando variavel
     $cargo = 'user';
     $senhaMD5=MD5($senha);
 
