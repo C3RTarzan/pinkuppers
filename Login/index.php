@@ -43,11 +43,11 @@
         ?>
 
         <?php
-            if(isset($_SESSION['cadastrado_socesso'])): ?>
+            if(isset($_SESSION['cadastrado_sucesso'])): ?>
             <p><small><small> Cadastrado com Sucesso, por favor efetue o login. </small></small></p>   
         <?php
             endif;
-            unset($_SESSION['cadastrado_socesso']);
+            unset($_SESSION['cadastrado_sucesso']);
         ?>
 
     </div>

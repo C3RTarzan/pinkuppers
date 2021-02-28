@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    box-sizing: border-box;
 }
 body{
     background: linear-gradient(0, #120c56, #000000);
@@ -136,18 +137,78 @@ body{
     display: flex;
     justify-content: center;
 }
-#section div{
+#section #pai{
     position: absolute;
     background-color: blanchedalmond;
     margin-top: 80px;
     margin-left: 150px;
     width: 80%;
     height: 500px;
+    background: linear-gradient(0, rgb(148, 94, 199), blueviolet);
+    overflow:auto;
 }
-#section div div{
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(0, #a09dc2, #c9f6fc);
+    border-radius: 10px;
+    border-style: groove;
+    border-color: rgb(51, 51, 51);
+    border-width: 2px;
+}
+::-webkit-scrollbar-track-piece{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+#section #pai .filho{
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(0, #4fa4aa, #4dc9aa);
+    display: grid;
+    grid-template-columns: 20fr 120px;
+    margin-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+    border-style: solid;
+    border-color: rgba(27, 27, 27, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+#section #pai .filho .barra-fora{
+    height: 40px;
+    background-color: rgb(216, 216, 216);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+#section #pai .filho .barra-dentro{
+    height: 100%;
+    background: linear-gradient(0, #20ad67, #80aa31);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#section #pai .filho .barra-dentro span{
     position: relative;
-    margin: 0;
-    width: 80%;
-    left: 20%;
-    background-color: rgb(159, 233, 255);
+    top: 6px;
+    font-size: 25px;
+}
+#section #pai .filho .time{
+    font-size: 25px;
+    height: 25px;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+#section #pai .filho .time span{
+    background-color: rgba(177, 252, 252, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+}
+#section #pai .filho .info span{
+    font-size: 25px;
+    margin-left: 30px;
+    background-color: rgba(177, 252, 252, 0.3);
+    color: rgb(41, 41, 41);
+    padding: 5px;
+    border-radius: 5px;
 }

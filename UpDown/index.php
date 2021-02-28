@@ -3,10 +3,6 @@ session_start();
 include('../verificar_login.php');
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,14 +15,11 @@ include('../verificar_login.php');
     <script src="https://kit.fontawesome.com/4095fc3d99.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="ajax.js"></script>
 
     <title>pinkuppers</title>
 </head>
 <body>
-    <!--<h3> Usuário: <?php// echo $_SESSION['nome_usuario']; ?> </h3>
-    <h3> Cargo: <?php// echo $_SESSION['nome_cargo']; ?> </h3>
-    <h3> E-mail: <?php// echo $_SESSION['nome_email']; ?> </h3>
-    -->
     
     <header>
             <div id="menu">
@@ -67,10 +60,10 @@ include('../verificar_login.php');
             </div>     
     </header>
     <section id="section">
-        <div>
-            <div>
-                <span>oiiiii</span>     
-            </div>
+        <div id="pai">
+            <?php
+            include "action.php"; 
+            ?>
         </div>
     </section>
 </body>

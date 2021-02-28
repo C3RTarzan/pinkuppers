@@ -70,11 +70,11 @@ if(empty($_POST['nick']) || empty($_POST['senha'])){ //checar se tem campos em b
         exit();
     } //verificar se ja existe o usuario.
 
-    $result = mysqli_query($conexao, $query);
+    $result = mysqli_query($conexao, $query); //Inserir dado de Registro
     if($result == ''){
         echo "<script language='javascript' type='text/javascript'>alert('O usuario não foi cadastrado!')</script>";
     }else{
-        $_SESSION['cadastrado_socesso'] = true;
+        $_SESSION['cadastrado_sucesso'] = true;
         header('Location: ../Home/index.php');
     }
 
