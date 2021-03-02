@@ -1,5 +1,6 @@
 # pinkuppers
-Projeto game html
+Projeto game html.
+
 Esse é um projeto que estou criando sozinho por enquanto.
 A ideia é um game parecido com HackerExperience ( um game de hack web ).
 
