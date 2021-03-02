@@ -1,6 +1,4 @@
 <?php
-include('../class/users.php');
-
 $id = $_SESSION['id'];
 $vali = true;
 

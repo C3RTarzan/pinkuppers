@@ -37,7 +37,7 @@ for($i = 0; $i < $row; $i++){
     if($time_now <= $time){
         echo "<div class='filho'>";
         echo "<div class='barra-fora'>";
-        echo "<div class='barra-dentro'><style>#section #pai .filho .barra-dentro{ width: $contPorc%; }</style><span>$contPorc%</span></div>";
+        echo "<div class='barra-dentro barra-dentro$i'><style>#section #pai .filho .barra-dentro$i{ width: $contPorc%; }</style><span>$contPorc%</span></div>";
         echo "</div>";
         echo "<div class='time'>";
         echo "<span>$count</span>";
